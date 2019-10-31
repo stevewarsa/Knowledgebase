@@ -174,18 +174,20 @@ How to kill all java processes in korn shell
 Here is a way to search for classes in a jar on local using cygwin  
 `grep JamServiceFactory c:/axis2-1.4.1/lib/*.jar`  
 Then you’ll get some results back like this:  
-`Binary file c:/axis2-1.4.1/lib/annogen-0.1.0.jar matches
+```
+Binary file c:/axis2-1.4.1/lib/annogen-0.1.0.jar matches
 Binary file c:/axis2-1.4.1/lib/xmlbeans-2.3.0.jar matches
-`  
+```  
 Then you can look to see if the exact class including package name exists in the jar:  
-`find c:/axis2-1.4.1/lib/ -name "annogen-0.1.0.jar" -exec jar tvf {} \; | grep -i JamServiceFactory
+```
+find c:/axis2-1.4.1/lib/ -name "annogen-0.1.0.jar" -exec jar tvf {} \; | grep -i JamServiceFactory
 2427 Sat Dec 11 22:25:58 GMT-07:00 2004 org/codehaus/jam/JamServiceFactory.class
 6800 Sat Dec 11 22:25:58 GMT-07:00 2004 org/codehaus/jam/provider/JamServiceFactoryImpl.class
 
 find c:/axis2-1.4.1/lib/ -name "xmlbeans-2.3.0.jar" -exec jar tvf {} \; | grep -i JamServiceFactory
 2675 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/JamServiceFactory.class
 7400 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/provider/JamServiceFactoryImpl.class
-`  
+```  
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
