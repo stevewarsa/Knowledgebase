@@ -151,20 +151,20 @@ To get code from remote origin via merge method
 	7.	`git status` should reveal a clean working directory
 	8.	Then you may push the changes upstream
 17.	To update branch from master:
-  1.	`git checkout master`
-  2.	`git pull`
-  3.	`git checkout <branch name>`
-  4.	`git merge master`
-  5.	merge if necessary
-  6.	test the code
-  7.	commit merged changes
-  8.	push merged changes
+	1.	`git checkout master`
+	2.	`git pull`
+	3.	`git checkout <branch name>`
+	4.	`git merge master`
+	5.	merge if necessary
+	6.	test the code
+	7.	commit merged changes
+	8.	push merged changes
 18.	How to create a branch from a tag:
-  1.	First, query all the tags for the one you want (in this case, I’m looking for build 138):
+	1.	First, query all the tags for the one you want (in this case, I’m looking for build 138):
 	`git tag | grep 138`
-  2.	Invoke `git branch <branch-name> <tag-name>`
+	2.	Invoke `git branch <branch-name> <tag-name>`
 	`git branch ibmsw-problem q2oNAJboss-Q2O_NA_JBOSS_DEV_Deploy-138`
-  3.	Then checkout that new branch:
+	3.	Then checkout that new branch:
 	`git checkout ibmsw-problem`
 
 ## SQL Queries
