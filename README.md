@@ -206,7 +206,8 @@ To run xwindows:
 3. From Xwindows
 	1. run command `xhost  +`
 4. On the host where you are running the gui program, enter the following command:
-	1. `export DISPLAY=172.16.131.141:0.0`    
+	1. `export DISPLAY=172.16.131.141:0.0`  
+
 In the above command, use your actual ip address.  IMPORTANT: The only exception to this is if you’re using X11 forwarding.  In that case do not export the display to your IP, otherwise the X11 forwarding will not work due to there being a firewall in between your PC and the server.    
 
 To test this, issue the command `xclock` - this should display a graphical clock in a window.
