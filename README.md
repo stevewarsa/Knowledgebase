@@ -224,7 +224,39 @@ Next, `chmod 666 .Xauthority`
 Use `xclock` to test.  
 
 ### How to replace all occurrences of one string with another using VI
-`:%s/oldstring/newstring/g`
+`:%s/oldstring/newstring/g`  
+
+### Here is a way to clear a log file while an app is running:  
+`cat /dev/null > [file name / path]`  
+
+Here is an example:  
+
+`cat /dev/null > /usr/WebSphere/AppServer/profiles/TestNode2/logs/q2o01b/native_stderr.log`  
+
+This will result in the file size being set to zero and the file contents being thrown away!  
+```
+### Script to recursively replace one string with another
+The script is currently in the /javadumps file system on london1.  Here are the contents of it:
+#!/bin/sh
+# first arg: File Pattern; e.g "*.xml"
+# second arg: pattern to search for; e.g. "find string"
+# third arg: replace string; e.g. "replace string"
+
+if [ $# -lt 3 ] ; then
+    echo -e "Wrong number of parameters."
+    echo -e "Usage:"
+    echo -e " renall 'filepat' findstring replacestring\n"
+    exit 1
+fi
+#echo $1 $2 $3
+for i in `find . -name "$1" -exec grep -l "$2" {} \;`
+do
+    mv "$i" "$i.sedsave"
+    sed "s/$2/$3/g" "$i.sedsave" > "$i"
+    echo $i
+    #rm "$i.sedsave"
+done
+```
 
 ## MongoDB
 ## Java
