@@ -212,8 +212,9 @@ In the above command, use your actual ip address.  IMPORTANT: The only exception
 
 To test this, issue the command `xclock` - this should display a graphical clock in a window.
 __On external webservers:__
-In the PuTTY configuration, make sure X11 forwarding is checked for the profile of the server you want to connect to as shown below:
+In the PuTTY configuration, make sure X11 forwarding is checked for the profile of the server you want to connect to as shown below:  
 
+![PuTTY configuration](/putty-config.png)
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
