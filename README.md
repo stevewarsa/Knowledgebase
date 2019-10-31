@@ -283,8 +283,10 @@ Note – if this doesn’t work, then it may be permissions related.  It didn’
 chmod 440 /home/wily/.ssh/authorized_keys
 ```
 This is because what I found on this on a forum post:  
+
 [http://www.unix.com/red-hat/12233-authorized_keys-passwordless-login.html](http://www.unix.com/red-hat/12233-authorized_keys-passwordless-login.html)  
-**Here's one thing to check....authorized_keys will be ignored if it is writable or could be replaced by anyone other than you. So $HOME must be writable only by you. Ditto $HOME/.ssh and $HOME/.shh/authorized_keys. This also applies to the parent directory of $HOME all the way back to /.**
+
+**"Here's one thing to check....authorized_keys will be ignored if it is writable or could be replaced by anyone other than you. So $HOME must be writable only by you. Ditto $HOME/.ssh and $HOME/.shh/authorized_keys. This also applies to the parent directory of $HOME all the way back to /."**
 
 ## MongoDB
 ## Java
