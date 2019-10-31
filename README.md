@@ -294,4 +294,29 @@ This is because what I found on this on a forum post:
 ### Maven
 ### Spring
 #### REST
+##### Swagger Code Gen Steps
+1. Clone git repo for the swagger-codegen tool into some directory:
+`git clone https://github.com/swagger-api/swagger-codegen.git`
+2. Run maven to build it:
+`mvn clean install`
+3. Run the following command to generate the sources:
+`java -DdebugModels -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate --library jersey1 -i swagger-file.json -l java -o generated-source`
+4. Note the following things about this command
+	1. -DdebugModels – it can be taken out, just for trying to troubleshoot this tool
+	2. The goal is generate
+	3. --library jersey1 – is critical – this causes the source code to be generated using JSON annotations rather than GSON
+	4. -i getSAP46CostPrice-swagger-file.json – this is the JSON schema file
+		1. Click on API Gallery on the top tabs
+		2. Click on “View Details >>” button under “getSAP46CostPrice”
+		3. Click on “Export API as” and select “JSON” and click export and you will get a JSON schema downloaded.  That is the file referred to in the command with -i
+	5.-l java – this is “L” in lower case – represents the language.
+	6. -o generated-source – this is the output directory
+5. Then import existing maven project into eclipse and select the ‘generated-source’ directory as the root directory.
+6. Fix any compile errors 
+7. Copy in the JSON schema file to the project
+8. then export the jar selecting only the io.swagger.client.model directory and the JSON schema file
+9. Upload that file to the Nexus repository with the appropriate version number - here is a sample command:
+`mvn deploy:deploy-file -Dfile=<jar file path/name> -DrepositoryId=nexus -Durl=http://my.nexus.repo:8080/repository/maven-releases -Dversion=4.0.0 -DgroupId=q2o.46 -DartifactId=ws-my-service`
+10. Make the POM and code updates in the codebase.
+
 ## Other
