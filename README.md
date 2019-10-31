@@ -169,9 +169,9 @@ To get code from remote origin via merge method
 
 ## SQL Queries
 ## Shell Scripting
-How to kill all java processes in korn shell  
+### How to kill all java processes in korn shell  
 `ps -ef | grep java | grep -v grep | awk '{print "kill " $2}' | ksh –x`  
-Here is a way to search for classes in a jar on local using cygwin  
+### Here is a way to search for classes in a jar on local using cygwin  
 `grep JamServiceFactory c:/axis2-1.4.1/lib/*.jar`  
 Then you’ll get some results back like this:  
 ```
@@ -188,11 +188,11 @@ find c:/axis2-1.4.1/lib/ -name "xmlbeans-2.3.0.jar" -exec jar tvf {} \; | grep -
 2675 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/JamServiceFactory.class
 7400 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/provider/JamServiceFactoryImpl.class
 ```  
-To force remove a directory and all of its contents and children, use the following command:  
+### To force remove a directory and all of its contents and children, use the following command:  
 ```
 rm –rf <directory name>
 ```
-How to find out what process is writing to a file  
+### How to find out what process is writing to a file  
 ```
 fuser {file}
 ```
@@ -200,7 +200,7 @@ For example:
 ```
 fuser /usr/WebSphere/AppServer/profiles/ProdNode1/velocity.log
 ```
-To run xwindows:  
+### To run xwindows:  
 1. Open cygwin
 2. Issue command  `startx`
 3. From Xwindows
@@ -210,11 +210,22 @@ To run xwindows:
 
 In the above command, use your actual ip address.  IMPORTANT: The only exception to this is if you’re using X11 forwarding.  In that case do not export the display to your IP, otherwise the X11 forwarding will not work due to there being a firewall in between your PC and the server.    
 
-To test this, issue the command `xclock` - this should display a graphical clock in a window.
-<span style="text-decoration: underline;"><strong>On external webservers:</strong></span>
+To test this, issue the command `xclock` - this should display a graphical clock in a window.  
+<strong>On external webservers:</strong>  
+
 In the PuTTY configuration, make sure X11 forwarding is checked for the profile of the server you want to connect to as shown below:  
 
-![PuTTY configuration](/putty-config.png)
+![PuTTY configuration](/putty-config.png)  
+Make sure to save this setting so you don’t have to do it every time.  
+Try the `xclock` command to test whether X11 is working or not.  If you `su` to another user, you must do the following, while in the home directory of the user you “su’d” to. `cp /home/<original userid>/.Xauthority .` < note the trailing ‘space dot’ >  
+
+Next, `chmod 666 .Xauthority`  
+
+Use `xclock` to test.  
+
+### How to replace all occurrences of one string with another using VI
+`:%s/oldstring/newstring/g`
+
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
