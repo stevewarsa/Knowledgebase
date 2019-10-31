@@ -211,7 +211,7 @@ To run xwindows:
 In the above command, use your actual ip address.  IMPORTANT: The only exception to this is if you’re using X11 forwarding.  In that case do not export the display to your IP, otherwise the X11 forwarding will not work due to there being a firewall in between your PC and the server.    
 
 To test this, issue the command `xclock` - this should display a graphical clock in a window.
-__On external webservers:__
+<span style="text-decoration: underline;"><strong>On external webservers:</strong></span>
 In the PuTTY configuration, make sure X11 forwarding is checked for the profile of the server you want to connect to as shown below:  
 
 ![PuTTY configuration](/putty-config.png)
