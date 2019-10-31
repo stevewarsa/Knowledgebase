@@ -188,6 +188,28 @@ find c:/axis2-1.4.1/lib/ -name "xmlbeans-2.3.0.jar" -exec jar tvf {} \; | grep -
 2675 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/JamServiceFactory.class
 7400 Tue May 22 13:26:08 GMT-07:00 2007 org/apache/xmlbeans/impl/jam/provider/JamServiceFactoryImpl.class
 ```  
+To force remove a directory and all of its contents and children, use the following command:  
+```
+rm –rf <directory name>
+```
+How to find out what process is writing to a file  
+```
+fuser {file}
+```
+For example:  
+```
+fuser /usr/WebSphere/AppServer/profiles/ProdNode1/velocity.log
+```
+To run xwindows:  
+1. Open cygwin
+2. Issue command  `startx`
+3. From Xwindows
+	1. run command `xhost  +`
+4. On the host where you are running the gui program, enter the following command:
+	1. `export DISPLAY=172.16.131.141:0.0`    
+In the above command, use your actual ip address.  IMPORTANT: The only exception to this is if you’re using X11 forwarding.  In that case do not export the display to your IP, otherwise the X11 forwarding will not work due to there being a firewall in between your PC and the server.    
+
+To test this, issue the command `xclock` - this should display a graphical clock in a window.
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
