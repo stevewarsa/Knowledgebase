@@ -234,9 +234,9 @@ Here is an example:
 `cat /dev/null > /usr/WebSphere/AppServer/profiles/TestNode2/logs/q2o01b/native_stderr.log`  
 
 This will result in the file size being set to zero and the file contents being thrown away!  
-```
 ### Script to recursively replace one string with another
 The script is currently in the /javadumps file system on london1.  Here are the contents of it:
+```
 #!/bin/sh
 # first arg: File Pattern; e.g "*.xml"
 # second arg: pattern to search for; e.g. "find string"
