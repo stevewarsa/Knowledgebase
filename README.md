@@ -142,14 +142,14 @@ To get code from remote origin via merge method
 	`git merge --no-commit --no-ff <branch name>`
 
 16.	If you get a merge with conflicts: 
-  1.	Go and fix the files (it can be in an IDE, e.g. VS Code or Eclipse, or another editor such as Notepad++) 
-  2.	Then save the files  
-  3.	Then run git status.  You will probably see a bunch of green entries (already added to stage because they were automatically merged).  But you will see the files that you manually fixed in red.
-  4.	Run “`git add .`”, which will add the files you changed to stage.
-  5.	Run `git status` again, and all files should be green.
-  6.	Then run `git commit -m “<comment>”` and it will commit the automatically merged and manually fixed (merged) files.
-  7.	`git status` should reveal a clean working directory
-  8.	Then you may push the changes upstream
+	1.	Go and fix the files (it can be in an IDE, e.g. VS Code or Eclipse, or another editor such as Notepad++) 
+	2.	Then save the files  
+	3.	Then run git status.  You will probably see a bunch of green entries (already added to stage because they were automatically merged).  But you will see the files that you manually fixed in red.
+	4.	Run “`git add .`”, which will add the files you changed to stage.
+	5.	Run `git status` again, and all files should be green.
+	6.	Then run `git commit -m “<comment>”` and it will commit the automatically merged and manually fixed (merged) files.
+	7.	`git status` should reveal a clean working directory
+	8.	Then you may push the changes upstream
 17.	To update branch from master:
   1.	`git checkout master`
   2.	`git pull`
