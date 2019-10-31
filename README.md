@@ -257,6 +257,34 @@ do
     #rm "$i.sedsave"
 done
 ```
+### Turning off / on the Highlighting on Linux VI
+to turn off highlighting on a VI editor in Linux edit the ~/.viminfo file and change the highlighting param from `H` to `h`
+
+Then if you want to turn it back on temporarily, issue:  
+
+`:set hlsearch`  
+### Set up SCP / SSH without password prompt:
+While signed in on the “source” box as the user who will be doing the SSH or SCP run this command from the home directory for that user:
+```
+ssh-keygen -t rsa -f .ssh/id_rsa
+```
+Then it will create a file called ‘id_rsa.pub’.  
+
+Then log onto the target box (that you will be SCPing or SSHing into) as the user you will be connecting as.  In the /home/username/.ssh directory see if there is already a file called “authorized_keys”.  If not, create one and put the contents of the id_rsa.pub created on the source box into it.  The contents may look something like this:
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA1XlwDreSZScOWkrupLjbJmGZD1szrnn6prKiIS4/QTPZxapkomBqjTIt07JZS0vrEwwDBzRXOnOmJGaGDzCcdhM8dmJ4QPkhyfRpHBVPRxAS8tsVHGIxJYo33SudY27rd2P/zaqV+0pVoUlZzu5snDvgmz34u3/oQNxXZ3k1XMs= wasadmin@cux120vig
+```
+If the file authorized_keys already exists, then just append to the end of it. Save the file.  
+
+That’s it – you will be able to SSH or SCP without being challenged for a password.  
+
+Note – if this doesn’t work, then it may be permissions related.  It didn’t work for me on AIX(source) -> Linux(target) one time and I ran this on the target Linux box:  
+```
+chmod 440 /home/wily/.ssh/authorized_keys
+```
+This is because what I found on this on a forum post:  
+[http://www.unix.com/red-hat/12233-authorized_keys-passwordless-login.html](http://www.unix.com/red-hat/12233-authorized_keys-passwordless-login.html)  
+**Here's one thing to check....authorized_keys will be ignored if it is writable or could be replaced by anyone other than you. So $HOME must be writable only by you. Ditto $HOME/.ssh and $HOME/.shh/authorized_keys. This also applies to the parent directory of $HOME all the way back to /.**
 
 ## MongoDB
 ## Java
