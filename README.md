@@ -13,6 +13,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
     - [REST](#rest)
   - [JPA/Hibernate](#jpa-hibernate)
 - [Other](#other)
+- [Tivoli](#tivoli)
 
 ## Git Commands
 If errors related to invalid proxy when trying to run git pull:
@@ -327,3 +328,6 @@ colNames.forEach(in::value);
 cq.where(in);  
 ```
 ## Other
+
+## Tivoli
+
