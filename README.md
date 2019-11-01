@@ -320,5 +320,13 @@ This is because what I found on this on a forum post:
 `mvn deploy:deploy-file -Dfile=<jar file path/name> -DrepositoryId=nexus -Durl=http://my.nexus.repo:8080/repository/maven-releases -Dversion=4.0.0 -DgroupId=q2o.46 -DartifactId=ws-my-service`
 10. Make the POM and code updates in the codebase.
 ### JPA-Hibernate
-
+Here is how to create an "in" query using CriteriaBuilder:
+```
+var sapVendorIdIn = cb.in(delivColumnDefinitionRoot.get("sapVendorId"));  
+sapVendorIds.forEach(sapVendorIdIn::value);  
+predicates.add(sapVendorIdIn);  
+predicates.add(cb.isNull(delivColumnDefinitionRoot.get("configTypeCd")));  
+predicates.add(cb.isNull(delivColumnDefinitionRoot.get("solutionTypeCd")));  
+cq.where(predicates.toArray(new Predicate[]{}));  
+```
 ## Other
