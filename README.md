@@ -322,11 +322,8 @@ This is because what I found on this on a forum post:
 ### JPA-Hibernate
 Here is how to create an "in" query using CriteriaBuilder:
 ```
-var sapVendorIdIn = cb.in(delivColumnDefinitionRoot.get("sapVendorId"));  
-sapVendorIds.forEach(sapVendorIdIn::value);  
-predicates.add(sapVendorIdIn);  
-predicates.add(cb.isNull(delivColumnDefinitionRoot.get("configTypeCd")));  
-predicates.add(cb.isNull(delivColumnDefinitionRoot.get("solutionTypeCd")));  
-cq.where(predicates.toArray(new Predicate[]{}));  
+var in = cb.in(tableRoot.get("colName"));  
+sapVendorIds.forEach(in::value);  
+cq.where(in);  
 ```
 ## Other
