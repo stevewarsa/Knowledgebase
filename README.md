@@ -340,3 +340,9 @@ On the WebSEAL logs, sometimes there is a message “The account for user %s has
 	4. Enter Password: <pwd>  
 	5. pdadmin sec_master> policy get disable-time-interval  
                              Disable time interval: 600
+
+In order to delete a person from ISIM, go to:
+/opt/IBM/itim/extensions/6.0/examples/ws/bin/unix/ and run:
+```
+./wsPersonService.sh -operationName?deletePerson -principal?"<actual ID goes here>" -credential?"<actual password goes here>" -filter?"(&(cn=Joe Smith)(sn=Smith))"
+```
