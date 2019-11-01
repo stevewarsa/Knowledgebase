@@ -323,7 +323,7 @@ This is because what I found on this on a forum post:
 Here is how to create an "in" query using CriteriaBuilder:
 ```
 var in = cb.in(tableRoot.get("colName"));  
-sapVendorIds.forEach(in::value);  
+colNames.forEach(in::value);  
 cq.where(in);  
 ```
 ## Other
