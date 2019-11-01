@@ -331,3 +331,11 @@ cq.where(in);
 
 ## Tivoli
 In the file `/opt/pdweb/etc/webseald-default.conf`, there is an entry `inactive-timeout`.  It can be set to something like 14,400 seconds (4 hours).  This is what controls the amount of time that a user can be inactive before they will get authentication challenge on the next request.
+
+On the WebSEAL logs, sometimes there is a message “The account for user %s has been temporarily locked due to too many failed login attempts”.  Temporarily, in our can mean 10 minutes (600 seconds) for example.  In order to find out the current value, use pdadmin:
+	1. pdadmin
+	2. pdadmin> login
+	3. Enter User ID: <user id>
+	4. Enter Password: <pwd>
+	5. pdadmin sec_master> policy get disable-time-interval
+                             Disable time interval: 600
