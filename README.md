@@ -11,6 +11,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
   - [Maven](#maven)
   - [Spring](#spring)
     - [REST](#rest)
+  - [JPA/Hibernate](#jpa-hibernate)
 - [Other](#other)
 
 ## Git Commands
@@ -318,5 +319,6 @@ This is because what I found on this on a forum post:
 9. Upload that file to the Nexus repository with the appropriate version number - here is a sample command:
 `mvn deploy:deploy-file -Dfile=<jar file path/name> -DrepositoryId=nexus -Durl=http://my.nexus.repo:8080/repository/maven-releases -Dversion=4.0.0 -DgroupId=q2o.46 -DartifactId=ws-my-service`
 10. Make the POM and code updates in the codebase.
+### JPA/Hibernate
 
 ## Other
