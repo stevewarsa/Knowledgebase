@@ -69,9 +69,9 @@ To put your local branch back to a particular commit:
 	`git reset --hard 029842e`
 	
 To add and commit at same time 
-
-	`commit -am “My commit comment”`
-
+```
+	commit -am “My commit comment”
+```
 Check the status of your local working directory (see uncommitted files, etc)
 	`git status`
 
