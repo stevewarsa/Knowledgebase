@@ -8,6 +8,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [MongoDB](#mongodb)
 - [Java](#java)
   - [Intellij IDEA Shortcuts](#intellij-idea-shortcuts)
+  - [VS Code Shortcuts] (#vs-code-shortcuts)
   - [Maven](#maven)
   - [Spring](#spring)
     - [REST](#rest)
@@ -304,6 +305,10 @@ This is because what I found on this on a forum post:
 9. Go back to previous location in code - Ctl + Alt + Back Arrow
 10. Find usages of field or method - Alt + F7
 11. Rename field or method - Shift + F6
+
+### VS Code Shortcuts
+1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
+2. Go to definition - F12
 
 ### Maven
 ### Spring
