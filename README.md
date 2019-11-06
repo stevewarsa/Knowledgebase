@@ -293,14 +293,15 @@ This is because what I found on this on a forum post:
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
-#### Method List F12
-#### Call Hierarchy Ctl + Alt + H
-#### Step Over F8
-#### Step Into F7
-#### Resume F9
-#### Go to Line Ctl + G
-#### Open Breakpoints popup Ctl + Shift + F8
-#### Generate Javadoc comment for element - Alt + Enter on element and select "Add Javadoc" from menu
+1. Method List - Ctl + F12
+2. Call Hierarchy - Ctl + Alt + H
+3. Step Over - F8
+4. Step Into - F7
+5. Resume - F9
+6. Go to Line - Ctl + G
+7. Open Breakpoints popup Ctl + Shift + F8
+8. Generate Javadoc comment for element - Alt + Enter on element and select "Add Javadoc" from menu
+9. Go back to previous location in code - Ctl + Alt + Back Arrow
 ### Maven
 ### Spring
 #### REST
