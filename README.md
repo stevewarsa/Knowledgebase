@@ -302,6 +302,9 @@ This is because what I found on this on a forum post:
 7. Open Breakpoints popup Ctl + Shift + F8
 8. Generate Javadoc comment for element - Alt + Enter on element and select "Add Javadoc" from menu
 9. Go back to previous location in code - Ctl + Alt + Back Arrow
+10. Find usages of field or method - Alt + F7
+11. Rename field or method - Shift + F6
+
 ### Maven
 ### Spring
 #### REST
