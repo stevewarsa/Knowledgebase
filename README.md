@@ -425,3 +425,6 @@ In order to delete a person from ISIM, go to:
 ## CSS
 ### Bootstrep 4
 To make a div be flexbox, use the class "d-flex"
+
+### Links
+Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
