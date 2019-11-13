@@ -15,6 +15,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
   - [JPA/Hibernate](#jpa-hibernate)
 - [Other](#other)
 - [Tivoli](#tivoli)
+- [CSS](#css)
 
 ## Git Commands
 If errors related to invalid proxy when trying to run git pull:
@@ -421,3 +422,6 @@ In order to delete a person from ISIM, go to:
 ```
 ./wsPersonService.sh -operationName?deletePerson -principal?"<actual ID goes here>" -credential?"<actual password goes here>" -filter?"(&(cn=Joe Smith)(sn=Smith))"
 ```
+## CSS
+### Bootstrep 4
+To make a div be flexbox, use the class "d-flex"
