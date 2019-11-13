@@ -404,7 +404,9 @@ colNames.forEach(in::value);
 cq.where(in);  
 ```
 ## Other
-### Here is a link to an online code editor - https://codesandbox.io/
+### Here is a link to an online code editor: 
+Note - it supports Angular, React and Vue (in addtion to vanilla javascript)
+https://codesandbox.io/
 
 ## Tivoli
 In the file `/opt/pdweb/etc/webseald-default.conf`, there is an entry `inactive-timeout`.  It can be set to something like 14,400 seconds (4 hours).  This is what controls the amount of time that a user can be inactive before they will get authentication challenge on the next request.
