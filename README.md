@@ -350,6 +350,11 @@ This is because what I found on this on a forum post:
 
 **"Here's one thing to check....authorized_keys will be ignored if it is writable or could be replaced by anyone other than you. So $HOME must be writable only by you. Ditto $HOME/.ssh and $HOME/.shh/authorized_keys. This also applies to the parent directory of $HOME all the way back to /."**
 
+### CURL Post Command
+```
+curl -d '{"field1": "9002028","field2": 121419788,"field3": 1}' -H "Content-Type: application/json" -X POST http://my.dns.com/myContextRoot/mycontroller/myendpoint 
+```
+
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
