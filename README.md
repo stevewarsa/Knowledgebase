@@ -365,6 +365,11 @@ This is because what I found on this on a forum post:
 10. Find usages of field or method - Alt + F7
 11. Rename field or method - Shift + F6
 
+#### Other Intellij Stuff
+If deleting a folder somewhere under .m2 and you want to get the jar to redownload
+
+From Intellij, right click on project and select Maven -> Reimport
+
 ### VS Code Shortcuts
 1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
 2. Go to definition - F12
