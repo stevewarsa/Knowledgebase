@@ -355,6 +355,12 @@ This is because what I found on this on a forum post:
 curl -d '{"field1": "9002028","field2": 121419788,"field3": 1}' -H "Content-Type: application/json" -X POST http://my.dns.com/myContextRoot/mycontroller/myendpoint 
 ```
 
+### Send email using mailx
+```
+currDate=`date -d '7 hour ago' "+%m/%d/%Y %H:%M:%S"`
+cat /home/myuser/errors.log | mailx -S smtp=smtprelay.my.domain.com -s "My Subject at ${currDate}" "my-group-email@domain.com"
+```
+
 ## MongoDB
 ## Java
 ### Intellij IDEA Shortcuts
