@@ -370,6 +370,14 @@ If deleting a folder somewhere under .m2 and you want to get the jar to redownlo
 
 From Intellij, right click on project and select Maven -> Reimport
 
+##### How to set an exception breakpoint:
+
+Press Ctrl+Shift+F8 or select Run | View Breakpoints from the main menu.
+
+In the Breakpoints dialog, press Alt+Insert or click the Add button, and select Java Exception Breakpoint or JavaScript Exception Breakpoint.
+
+In the Enter Exception Class dialog, specify an exception class from the library or from your project.
+
 ### VS Code Shortcuts
 1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
 2. Go to definition - F12
