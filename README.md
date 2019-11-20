@@ -171,6 +171,8 @@ To get code from remote origin via merge method
 	`git branch ibmsw-problem q2oNAJboss-Q2O_NA_JBOSS_DEV_Deploy-138`
 	3.	Then checkout that new branch:
 	`git checkout ibmsw-problem`
+19.	To show information about the remote associated with your local branch:
+	`git remote show origin`
 
 ## SQL Statements
 ### Example of create table with PK, FK, Trigger and Grants
