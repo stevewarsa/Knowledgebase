@@ -376,6 +376,7 @@ cat /home/myuser/errors.log | mailx -S smtp=smtprelay.my.domain.com -s "My Subje
 9. Go back to previous location in code - Ctl + Alt + Back Arrow
 10. Find usages of field or method - Alt + F7
 11. Rename field or method - Shift + F6
+12. Optimize imports - Ctl + Alt + O
 
 #### Other Intellij Stuff
 If deleting a folder somewhere under .m2 and you want to get the jar to redownload
