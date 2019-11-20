@@ -17,6 +17,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Tivoli](#tivoli)
 - [CSS](#css)
 - [Yarn](#yarn)
+- [Angular](#angular)
 
 ## Git Commands
 If errors related to invalid proxy when trying to run git pull:
@@ -466,6 +467,15 @@ The run this command:
 ```
 yarn config set strict-ssl false
 ```
+## Angular
+### How to run Angular Karma unit tests with Jasmine (with optional Chrome debugging)
+run `ng test`, which will launch the Jasmine test runner in the Chrome web browser.  On the Jasmine test runner, there is a debug button in the upper right of the browser window.  If you click that a new window opens.  Then you can open the developer tools and set breakpoints as normal.
 
+### How to create a unit test in angular
+1. Create a spec file for your test suite
+2. Invoke the `describe` function with 2 args: description and a fat arrow function
+3. Inside the `describe` fat arrow function, invoke the `it` function with 2 args: description and fat arrow function
+4. Write the code to set up the test conditions
+5. Write one or more `expect` functions with the calculated value, chaining (for example) `toEqual` with an expected value passed in.
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
