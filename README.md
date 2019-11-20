@@ -16,6 +16,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Other](#other)
 - [Tivoli](#tivoli)
 - [CSS](#css)
+- [Yarn](#yarn)
 
 ## Git Commands
 If errors related to invalid proxy when trying to run git pull:
@@ -452,6 +453,16 @@ In order to delete a person from ISIM, go to:
 ## CSS
 ### Bootstrep 4
 To make a div be flexbox, use the class "d-flex"
+
+## Yarn
+If getting this error: 
+```
+error An unexpected error occurred https://registry.yarnpkg.com/@angular/common/-/common-7.0.3.tgz "unable to get local issuer certificate"
+```
+The run this command:
+```
+yarn config set strict-ssl false
+```
 
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
