@@ -20,6 +20,8 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Angular](#angular)
 
 ## Git Commands
+If you are trying to locate some branch and are not seeing it by using `git branch -a`, then make sure to run `git fetch`, which will pull down the metadata for any new branches created.  Then you should be able to see the branch you're looking for.  
+
 If errors related to invalid proxy when trying to run git pull:
 From git bash, run “cd ~” to go to home dir and look for “.gitconfig” file.  In there, you may have an [http] section with a proxy defined.  To fix the problem, you have to edit or remove that.
 
