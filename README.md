@@ -484,6 +484,9 @@ Then add the following dependencies to your POM for that WAR project:
 	<version>2.9.2</version>
 </dependency>
 ```
+If you've configured everything correctly, then it will generate a web page of documentation (and a downloadable swagger JSON schema file) that can be viewed.  Here is a sample URL:  
+http://myapp.myco.com/myWarName/controller/swagger-ui.html
+
 ### JPA-Hibernate
 Here is how to create an "in" query using CriteriaBuilder:
 ```
