@@ -427,6 +427,63 @@ In the Enter Exception Class dialog, specify an exception class from the library
 9. Upload that file to the Nexus repository with the appropriate version number - here is a sample command:
 `mvn deploy:deploy-file -Dfile=<jar file path/name> -DrepositoryId=nexus -Durl=http://my.nexus.repo:8080/repository/maven-releases -Dversion=4.0.0 -DgroupId=q2o.46 -DartifactId=ws-my-service`
 10. Make the POM and code updates in the codebase.
+##### Swagger - How to Auto-Generate a Swagger Page with documentation for your API
+In the Java Web Config class (used to be web.xml), put something like this:  
+```
+    @Bean
+    public Docket api(ServletContext servletContext) {
+        Docket docket=  new Docket(DocumentationType.SWAGGER_2)
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.myco.myapp.ws"))
+            .paths(PathSelectors.any())
+            .build().apiInfo(apiInfo());
+        return docket;
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("swagger-ui.html")
+          .addResourceLocations("classpath:/META-INF/resources/");
+     
+        registry.addResourceHandler("/webjars/**")
+          .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+    
+    @Bean
+    public ApiInfo apiInfo() {
+        Contact contact = new Contact("My team.", "", "my-team@myco.com");
+        return new ApiInfo("My Team's APIs", "Information related to api exposed by our system.", "1.0",
+                "", contact, "My internal API",
+                "", new ArrayList<>());
+    }
+
+```
+Also, you need to put the following annotation at the top of that web configuration class (in addition to all the other annotations you have):  
+`@EnableSwagger2`
+
+Then add the following dependencies to your POM for that WAR project:
+```
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger2</artifactId>
+	<version>2.9.2</version>
+</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger-ui</artifactId>
+	<version>2.9.2</version>
+</dependency>
+<dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+	<version>20.0</version>
+</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger-common</artifactId>
+	<version>2.9.2</version>
+</dependency>
+```
 ### JPA-Hibernate
 Here is how to create an "in" query using CriteriaBuilder:
 ```
