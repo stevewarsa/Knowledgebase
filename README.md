@@ -533,6 +533,9 @@ The run this command:
 yarn config set strict-ssl false
 ```
 ## Angular
+### Online IDE for Angular (and other web frameworks) - Stack Blitz:
+You can sign in with your github account: https://stackblitz.com/ 
+
 ### How to run Angular Karma unit tests with Jasmine (with optional Chrome debugging)
 run `ng test`, which will launch the Jasmine test runner in the Chrome web browser.  On the Jasmine test runner, there is a debug button in the upper right of the browser window.  If you click that a new window opens.  Then you can open the developer tools and set breakpoints as normal.
 
