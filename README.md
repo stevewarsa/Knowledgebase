@@ -404,6 +404,9 @@ In the Enter Exception Class dialog, specify an exception class from the library
 ### Spring
 #### REST
 ##### Swagger Code Gen Steps
+**Note** - If you don't want to go through the following steps, you can visit this website and it will generate the model for you with the proper annotations:  
+http://www.jsonschema2pojo.org/
+
 1. Clone git repo for the swagger-codegen tool into some directory:
 `git clone https://github.com/swagger-api/swagger-codegen.git`
 2. Run maven to build it:
