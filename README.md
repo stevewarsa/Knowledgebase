@@ -261,6 +261,13 @@ GRANT INSERT, UPDATE, DELETE ON MY_TRANSACTION_TABLE TO MY_USER_UPDATE;
 ALTER TABLE MY_CODE_TABLE MODIFY MY_TYPE_DS VARCHAR2(50 CHAR);
 ```
 ## Shell Scripting
+### Use imagemagick to change the orientation of image
+There are times when photos taken from iOS devices will have the orientation value in the EXIF data set to 6 causing the image orientation to be "on it's side".  In order to fix this from the command line with imagemagick, run a command like this:  
+```
+convert image3.jpeg -auto-orient image3fixed.jpg
+```
+That makes the image be rendered with the proper orientation.
+
 ### How to kill all java processes in korn shell  
 `ps -ef | grep java | grep -v grep | awk '{print "kill " $2}' | ksh –x`  
 ### Here is a way to search for classes in a jar on local using cygwin  
