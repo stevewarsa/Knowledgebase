@@ -182,7 +182,9 @@ To get code from remote origin via merge method
 ### How to read image metadata to determine orientation (among other things)
 `$exif_data = exif_read_data("img/church_photos/" . $galleryDirectory . "/" . $fileinfo->getFilename(), 0, true);`  
 Then, to get any values out of the exif data, just use `var_dump`  
-In my case, I was trying to find the orientation, so I used this:
+In my case, I was trying to find the orientation. As a side note, if you need to look at the EXIF data for any image, go to this site: http://exif.regex.info/
+
+I used this code to read the orientation value from the exif data:
 ```
 if(!empty($exif_data['IFD0']['Orientation'])) {
 	error_log('Image orientation ' . $exif_data['IFD0']['Orientation'] . ' FOUND for img/church_photos/' . $galleryDirectory . '/' . $fileinfo->getFilename() . '...');
