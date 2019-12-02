@@ -3,6 +3,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 
 ## Table of Contents
 - [Git Commands](#git-commands)
+- [PHP](#php)
 - [SQL Statements](#sql-statements)
 - [Shell Scripting](#shell-scripting)
 - [MongoDB](#mongodb)
@@ -177,6 +178,27 @@ To get code from remote origin via merge method
 19.	To show information about the remote associated with your local branch:
 	`git remote show origin`
 
+## PHP
+### How to read image metadata to determine orientation (among other things)
+`$exif_data = exif_read_data("img/church_photos/" . $galleryDirectory . "/" . $fileinfo->getFilename(), 0, true);`  
+Then, to get any values out of the exif data, just use `var_dump`  
+In my case, I was trying to find the orientation, so I used this:
+```
+if(!empty($exif_data['IFD0']['Orientation'])) {
+	error_log('Image orientation ' . $exif_data['IFD0']['Orientation'] . ' FOUND for img/church_photos/' . $galleryDirectory . '/' . $fileinfo->getFilename() . '...');
+	if ($exif_data['IFD0']['Orientation'] == 6) {
+		$imageRotateValue = 90;
+	}
+} else {
+	error_log('Image orientation MISSING for img/church_photos/' . $galleryDirectory . '/' . $fileinfo->getFilename() . '...');
+}
+$imageRotateStyle = null;
+if ($imageRotateValue != -1) {
+	$imageRotateStyle = ' style="transform: rotate(' . $imageRotateValue . 'deg);"';
+}
+error_log('Style = ' . $imageRotateStyle . ' for img/church_photos/' . $galleryDirectory . '/' . $fileinfo->getFilename() . '...');
+<img class="img-fluid" src="<?=$galleryImageFullPath?>"<?= $imageRotateStyle != null ? $imageRotateStyle : '' ?> />
+```
 ## SQL Statements
 ### Example of create table with PK, FK, Trigger and Grants
 ```
