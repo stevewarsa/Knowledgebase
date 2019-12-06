@@ -576,5 +576,31 @@ run `ng test`, which will launch the Jasmine test runner in the Chrome web brows
 3. Inside the `describe` fat arrow function, invoke the `it` function with 2 args: description and fat arrow function
 4. Write the code to set up the test conditions
 5. Write one or more `expect` functions with the calculated value, chaining (for example) `toEqual` with an expected value passed in.
+### How to debug Jest unit tests in VS Code
+I learned this approach from this blog post: https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
+1. Create a launch.json file in the ".vscode" directory under the workspace root (note - if .vscode directory doesn't exist, create it).
+2. Alternatively, you can go to the Debug tab on the left, and at the top create a new configuration (as described at the website above)
+3. Your launch.json can be configured like this:
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Jest Tests",
+        "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "args": ["--verbose", "-i", "--no-cache"],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
+```
+3. Then, put a breakpoint somewhere in the code to be tested.
+4. Then, start the debugger from the top menu (Debug --> Start Debugging) or F5
+5. All Jest tests should start running
+6. When the execution hits the line at which you put the breakpoint, it will stop.  
+7. In the debug pane on the left, you should be able to inspect local variables, etc.
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
