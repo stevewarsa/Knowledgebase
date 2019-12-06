@@ -8,7 +8,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Shell Scripting](#shell-scripting)
 - [MongoDB](#mongodb)
 - [Java](#java)
-  - [Intellij IDEA Shortcuts](#intellij-idea-shortcuts)
+  - [Intellij](#intellij)
   - [VS Code Shortcuts](#vs-code-shortcuts)
   - [Maven](#maven)
   - [Spring](#spring)
@@ -400,7 +400,8 @@ cat /home/myuser/errors.log | mailx -S smtp=smtprelay.my.domain.com -s "My Subje
 
 ## MongoDB
 ## Java
-### Intellij IDEA Shortcuts
+### Intellij
+#### Keyboard shortcuts
 1. Method List - Ctl + F12
 2. Call Hierarchy - Ctl + Alt + H
 3. Step Over - F8
@@ -419,13 +420,16 @@ If deleting a folder somewhere under .m2 and you want to get the jar to redownlo
 
 From Intellij, right click on project and select Maven -> Reimport
 
-##### How to set an exception breakpoint:
+#### How to set an exception breakpoint:
 
 Press Ctrl+Shift+F8 or select Run | View Breakpoints from the main menu.
 
 In the Breakpoints dialog, press Alt+Insert or click the Add button, and select Java Exception Breakpoint or JavaScript Exception Breakpoint.
 
 In the Enter Exception Class dialog, specify an exception class from the library or from your project.
+
+#### How to locate the IDE logs
+Help --> Show Log in Explorer (near the middle of the menu)
 
 ### VS Code Shortcuts
 1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
