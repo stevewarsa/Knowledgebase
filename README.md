@@ -597,10 +597,10 @@ I learned this approach from this blog post: https://www.basefactor.com/using-vi
     ]
 }
 ```
-3. Then, put a breakpoint somewhere in the code to be tested.
-4. Then, start the debugger from the top menu (Debug --> Start Debugging) or F5
-5. All Jest tests should start running
-6. When the execution hits the line at which you put the breakpoint, it will stop.  
-7. In the debug pane on the left, you should be able to inspect local variables, etc.
+4. Then, put a breakpoint somewhere in the code to be tested.
+5. Then, start the debugger from the top menu (Debug --> Start Debugging) or F5
+6. All Jest tests should start running
+7. When the execution hits the line at which you put the breakpoint, it will stop.  
+8. In the debug pane on the left, you should be able to inspect local variables, etc.
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
