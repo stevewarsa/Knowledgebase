@@ -567,6 +567,18 @@ The run this command:
 ```
 yarn config set strict-ssl false
 ```
+
+### Pikaday import in typescript file causing AOT build inside a Docker container on Linux
+If you're getting an error indicating it can't find Module for pikaday when running an angular AOT build with yarn (even though the AOT build works on the local DEV box) and you have an import like this:
+
+`import * as Pikaday from "Pikaday";`
+
+Switch it over to an import like this:
+
+`import Pikaday from "node_modules/pikaday/pikaday.js";`
+
+Bit of a brute force solution, but it works.
+
 ## Angular
 ### Online IDE for Angular (and other web frameworks) - Stack Blitz:
 You can sign in with your github account: https://stackblitz.com/  
