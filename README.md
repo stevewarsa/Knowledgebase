@@ -623,7 +623,7 @@ run `ng test`, which will launch the Jasmine test runner in the Chrome web brows
 5. Write one or more `expect` functions with the calculated value, chaining (for example) `toEqual` with an expected value passed in.
 
 ### How to disable a test in karma
-To enable a suite of tests, instead of putting it in a "describe()" function, but the test in an "xdescribe()" function.  To just disable a single test, change "it()" function to "xit()"  
+To enable a suite of tests, instead of putting it in a "describe()" function, but the test in an "xdescribe()" function.  To just disable a single test, change "it()" function to "xit()".  See this article: https://davidtang.io/2016/01/03/controlling-which-tests-run-in-jasmine.html  
 
 ### How to debug Jest unit tests in VS Code
 I learned this approach from this blog post: https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
