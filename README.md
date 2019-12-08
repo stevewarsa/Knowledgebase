@@ -9,7 +9,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [MongoDB](#mongodb)
 - [Java](#java)
   - [Intellij](#intellij)
-  - [VS Code Shortcuts](#vs-code-shortcuts)
+  - [VS Code](#vs-code)
   - [Maven](#maven)
   - [Spring](#spring)
     - [REST](#rest)
