@@ -621,6 +621,10 @@ run `ng test`, which will launch the Jasmine test runner in the Chrome web brows
 3. Inside the `describe` fat arrow function, invoke the `it` function with 2 args: description and fat arrow function
 4. Write the code to set up the test conditions
 5. Write one or more `expect` functions with the calculated value, chaining (for example) `toEqual` with an expected value passed in.
+
+### How to disable a test in karma
+To enable a suite of tests, instead of putting it in a "describe()" function, but the test in an "xdescribe()" function.  To just disable a single test, change "it()" function to "xit()"  
+
 ### How to debug Jest unit tests in VS Code
 I learned this approach from this blog post: https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
 1. Create a launch.json file in the ".vscode" directory under the workspace root (note - if .vscode directory doesn't exist, create it).
