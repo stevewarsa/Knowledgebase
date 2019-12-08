@@ -431,6 +431,18 @@ In the Enter Exception Class dialog, specify an exception class from the library
 #### How to locate the IDE logs
 Help --> Show Log in Explorer (near the middle of the menu)
 
+#### How to set up comment templates (such as your intials and the date)
+1. Go to the Settings Page
+2. Search for Live Templates
+3. Select the "other" category
+4. Click the "+" button
+5. Select "Live Template"
+6. Give an abbreviation - this will be what you start typing and press Ctl + Space to do the completion
+7. Define what contexts it will be available in (such as the Java category)
+8. You can define variables such as date and time - here is an example:
+// SW [$DATE$ $TIME$] $END$
+9. Those variables can be populated by a pre-defined function (in this case date() and time()).
+
 ### VS Code Shortcuts
 1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
 2. Go to definition - F12
