@@ -443,9 +443,26 @@ Help --> Show Log in Explorer (near the middle of the menu)
 // SW [$DATE$ $TIME$] $END$
 9. Those variables can be populated by a pre-defined function (in this case date() and time()).
 
-### VS Code Shortcuts
+### VS Code 
+
+#### Shortcuts
 1. List Methods/Fields - Ctl + Shift + o (then start typing the method or field you want to find)
 2. Go to definition - F12
+
+#### Comment Templates
+Visit this page and it desribes how: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+Here is an example of setting up a custom inline comment with my initials, the current date/time and the cursor at the end:
+
+```
+{
+	"Comment by me": {
+		"prefix": "sw",
+		"body": "$LINE_COMMENT SW[$CURRENT_DAY_NAME_SHORT $CURRENT_DATE/$CURRENT_MONTH/$CURRENT_YEAR_SHORT $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND] $0",
+		"description": "Insert a comment with my initials and date/time"
+	}
+}
+```
 
 ### Maven
 ### Spring
