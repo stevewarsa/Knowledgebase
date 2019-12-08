@@ -443,6 +443,9 @@ Help --> Show Log in Explorer (near the middle of the menu)
 // SW [$DATE$ $TIME$] $END$
 9. Those variables can be populated by a pre-defined function (in this case date() and time()).
 
+#### How to reload classes without restarting the server
+Ctl + F10 - then in the popup, select "Update classes and resources"
+
 ### VS Code 
 
 #### Shortcuts
