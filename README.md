@@ -587,7 +587,7 @@ In order to delete a person from ISIM, go to:
 ./wsPersonService.sh -operationName?deletePerson -principal?"<actual ID goes here>" -credential?"<actual password goes here>" -filter?"(&(cn=Joe Smith)(sn=Smith))"
 ```
 ## CSS
-### Bootstrep 4
+### Bootstrap 4
 To make a div be flexbox, use the class "d-flex"
 
 ## Yarn
