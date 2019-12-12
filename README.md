@@ -446,6 +446,9 @@ Help --> Show Log in Explorer (near the middle of the menu)
 #### How to reload classes without restarting the server
 Ctl + F10 - then in the popup, select "Update classes and resources"
 
+#### "release version 5 not supported" error
+If you get the "release version 5 not supported" error, go to Settings -> Build, Execution, Deployment -> Compiler -> Java Compiler and check/correct the Per-module bytecode version level.  Make sure it matches what you think.  In my case it was saying 1.5, so I had to switch it to 11 to match what I was expecting.
+
 ### VS Code 
 
 #### Shortcuts
