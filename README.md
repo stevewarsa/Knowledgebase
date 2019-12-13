@@ -664,7 +664,7 @@ I learned this approach from this blog post: https://www.basefactor.com/using-vi
 Let's say you have a list of messages that you want to put in a tooltip:
 
 ```
-messages: string[] - ['message 1', 'message 2'];
+messages: string[] = ['message 1', 'message 2'];
 ```
 Then you can add an ng-template inside the html template file:
 ```
