@@ -676,6 +676,15 @@ Then you can add an ng-template inside the html template file:
   </ul>
 </ng-template>
 ```
+Then, refer to the template on the element where you want the tooltip
+```
+<div class="modal-footer">
+  <span class="mr-2" placement="left"
+    [ngbTooltip]="tipContent">
+    <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  </span>
+</div>
+```
 
 Then the tooltip will show up like this:
 ![HTML Tooltip with NG Bootstrap](/html-tooltip.png)
