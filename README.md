@@ -660,5 +660,25 @@ I learned this approach from this blog post: https://www.basefactor.com/using-vi
 6. All Jest tests should start running
 7. When the execution hits the line at which you put the breakpoint, it will stop.  
 8. In the debug pane on the left, you should be able to inspect local variables, etc.
+### How to put HTML inside NG Bootstrap Tooltips
+Let's say you have a list of messages that you want to put in a tooltip:
+
+```
+messages: string[] - ['message 1', 'message 2'];
+```
+Then you can add an ng-template inside the html template file:
+```
+<ng-template #tipContent>
+  <ul class="list-unstyled">
+    <li *ngFor="let msg of otherMessages">
+      {{msg}}
+    </li>
+  </ul>
+</ng-template>
+```
+
+Then the tooltip will show up like this:
+![HTML Tooltip with NG Bootstrap](/html-tooltip.png)
+
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
