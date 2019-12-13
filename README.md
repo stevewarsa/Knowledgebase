@@ -670,7 +670,7 @@ Then you can add an ng-template inside the html template file:
 ```
 <ng-template #tipContent>
   <ul class="list-unstyled">
-    <li *ngFor="let msg of otherMessages">
+    <li *ngFor="let msg of messages">
       {{msg}}
     </li>
   </ul>
