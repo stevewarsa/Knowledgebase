@@ -689,5 +689,9 @@ Then, refer to the template on the element where you want the tooltip
 Then the tooltip will show up like this:
 ![HTML Tooltip with NG Bootstrap](/html-tooltip.png)
 
+Here is a sample stackblitz where you can acheive dynamic tooltips with hover:
+
+https://stackblitz.com/edit/dynamic-ngb-tooltips
+
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
