@@ -452,6 +452,13 @@ If you get the "release version 5 not supported" error, go to Settings -> Build,
 #### To ensure classes/resources are reloaded at runtime of server
 Run -> Edit Configurations.  Then, on the "Server" tab the field "On 'Update' action" field should be changed to "Update Classes and Resources"
 
+### There is an issue in running functional tests in Intellij (It complains about module spring-core not being open to the module where the test lives)
+
+Through some experimentation, I found out that you can temporarily give it a special tag like this:
+![Functional Test with Tag](/func-test.jpg)
+Then create a test configuration like this:
+![Run Test Configuration](/run-test.jpg)
+Then it works fine.  I’m not quite sure why this makes it work – something about the module system.  Anyway, it is a decent workaround.  
 ### VS Code 
 
 #### Shortcuts
