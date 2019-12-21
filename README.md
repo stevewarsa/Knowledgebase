@@ -400,6 +400,14 @@ cat /home/myuser/errors.log | mailx -S smtp=smtprelay.my.domain.com -s "My Subje
 
 ## MongoDB
 ## Java
+### Java 8 +
+#### How to initialize an arraylist with double curly brace intialization
+```
+var myList = new ArrayList<String>(){{
+    add("My List Item");
+}};
+```
+
 ### Intellij
 #### Keyboard shortcuts
 1. Method List - Ctl + F12
