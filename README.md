@@ -408,7 +408,7 @@ var myList = new ArrayList<String>(){{
 }};
 ```
 
-See this page for other ways to initialize an ArrayList in 1 line.
+See this page for other ways to initialize an ArrayList in 1 line: https://www.baeldung.com/java-init-list-one-line
 
 ### Intellij
 #### Keyboard shortcuts
