@@ -21,6 +21,34 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Angular](#angular)
 
 ## Git Commands
+### To associate local branch to remote github repo:
+1. Create a new repository on GitHub.
+2. Open Git Bash.
+3. Change the current working directory to your local project.
+4. Initialize the local directory as a Git repository.
+
+`$ git init`
+
+5. Add the files in your new local repository. This stages them for the first commit.
+
+`$ git add .`
+6. Commit the files that you've staged in your local repository.
+
+`$ git commit -m "First commit"`
+
+7. At the top of your GitHub repository's Quick Setup page, click to copy the remote repository URL.
+
+8. In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
+```
+$ git remote add origin <remote repository URL>
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+```
+9. Push the changes in your local repository to GitHub.
+
+`$ git push origin master`
+
 If you are trying to locate some (remote) branch that was created by someone else recently and are not seeing it by using `git branch -a`, then make sure to run `git fetch`, which will pull down the metadata for any new branches created.  Then you should be able to see the branch you're looking for.  
 
 If errors related to invalid proxy when trying to run git pull:
