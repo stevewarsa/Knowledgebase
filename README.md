@@ -9,6 +9,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [MongoDB](#mongodb)
 - [Java](#java)
   - [Intellij](#intellij)
+  - [Mockito](#mockito)
   - [VS Code](#vs-code)
   - [Maven](#maven)
   - [Spring](#spring)
@@ -497,6 +498,16 @@ Through some experimentation, I found out that you can temporarily give it a spe
 Then create a test configuration like this:
 ![Run Test Configuration](/run-test.jpg)  
 Then it works fine.  I’m not quite sure why this makes it work – something about the module system.  Anyway, it is a decent workaround.  
+### Mockito
+#### To return argument passed in, use an ArgumentCaptor:
+For example:
+```
+// inside the setUp() with annotation @BeforeEach
+ArgumentCaptor<CopyQuoteParam> param = ArgumentCaptor.forClass(CopyQuoteParam.class);
+Mockito.when(quoteService.copyQuote(param.capture())).thenAnswer(invocation -> param.getValue().getQuote());
+// then, later in the test code - invoke method that will ultimately call the mocked method
+```
+
 ### VS Code 
 
 #### Shortcuts
