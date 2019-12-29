@@ -507,7 +507,12 @@ ArgumentCaptor<CopyQuoteParam> param = ArgumentCaptor.forClass(CopyQuoteParam.cl
 Mockito.when(quoteService.copyQuote(param.capture())).thenAnswer(invocation -> param.getValue().getQuote());
 // then, later in the test code - invoke method that will ultimately call the mocked method
 ```
-
+#### To count how many times a method was called use Mockito.verify
+For example:
+```
+Mockito.verify(statusMessageService, Mockito.times(5)).addCallStatus(any(), any());
+```
+In this case if `statusMessageService.addCallStatus(String, String)` was not called exactly 5 times, the test would fail.
 ### VS Code 
 
 #### Shortcuts
