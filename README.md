@@ -533,6 +533,7 @@ Here is an example of setting up a custom inline comment with my initials, the c
 	}
 }
 ```
+To edit these settings in the future, open the command palette (Ctl + Shift + P) and type snippet and there will be an entry that says `Preferences: Configure User Snippets`.  Select that entry and another drop down list will be shown - then select the snippets file that you'd previously saved to edit it again.
 
 ### Maven
 ### Spring
