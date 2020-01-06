@@ -20,6 +20,7 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [CSS](#css)
 - [Yarn](#yarn)
 - [Angular](#angular)
+- [Azure DevOps](#azuredevops)
 
 ## Git Commands
 ### To associate local branch to remote github repo:
@@ -757,3 +758,27 @@ https://stackblitz.com/edit/dynamic-ngb-tooltips
 
 ### Links
 Good guide to Flexbox:  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+## Azure DevOps
+### To set the master branch policy to prevent push 
+In the project:
+1. Go to Project Settings (on the very bottom left of the screen)
+2. Then in the menu on the left, click on "Repositories"
+3. Find your repository
+4. Expand the Branches
+5. Find the master branch and click on it
+6. Click on the Policies tab
+7. Check off the "Require a minimum number of reviewers" and enter at least 1
+8. Fill out rest of screen with whatever makes sense:
+![Branch policies for master](/branchpolicies.png)
+9. If this is all you do, then, you will still be able to push from a local branch.  You will get a message like this:
+```
+remote: warning: This push has bypassed configured policies for the branch.                                                                       
+To https://anycorp.visualstudio.com/ANY/_git/ANY-Team-CODE
+
+   c2c6b5b..a15e167  master -> master                                                                                                  
+```
+10. Then make this change:
+![Security Settings for master](/branch-security-settings.png)
+
+That's it - then you won't be able to push from a local master branch to this remote master branch.
