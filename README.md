@@ -441,6 +441,12 @@ var myList = new ArrayList<String>(){{
 See this page for other ways to initialize an ArrayList in 1 line: https://www.baeldung.com/java-init-list-one-line
 
 ### Intellij
+#### How to Generate JPA/Hibernate DB Entity Classes from Schema
+1. Open the Persistence Panel:
+![Persistence Panel](/persistence.png)
+2. Right click in the panel and select "Generate Persistence Mapping" --> "by Database Schema"
+3. In the popup, select the Data Source (if pre-configured) and the package where you want the code to be generated.
+4. 
 #### Keyboard shortcuts
 1. Method List - Ctl + F12
 2. Call Hierarchy - Ctl + Alt + H
