@@ -446,7 +446,9 @@ See this page for other ways to initialize an ArrayList in 1 line: https://www.b
 ![Persistence Panel](/persistence.png)
 2. Right click in the panel and select "Generate Persistence Mapping" --> "by Database Schema"
 3. In the popup, select the Data Source (if pre-configured) and the package where you want the code to be generated.
-4. 
+4. Select the grid where all the table names show up and start typing the source table name from which you want to generate the entity
+5. Note - if the table you want to generate an entity from does not show up in the list, you may need to use the refresh button.  If you refresh and the table name still does not show up, you may need to reopen the popup.
+6. Check the table(s) you want to generate entities for (and all the columns will automatically be selected).  Then click OK and after answering a confirmation, the classes will be generated.
 #### Keyboard shortcuts
 1. Method List - Ctl + F12
 2. Call Hierarchy - Ctl + Alt + H
