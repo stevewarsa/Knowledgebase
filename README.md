@@ -646,6 +646,13 @@ cq.where(in);
 Note - it supports Angular, React and Vue (in addtion to vanilla javascript)
 https://codesandbox.io/
 
+### How to access Nearly Free Speech (nearlyfreespeech.net) without password prompt
+1. Login to your member account
+2. Switch to the Profile tab
+3. On the green "Action" menu on the right, click on the "Add SSH Key" link
+4. In the input box, copy and paste the contents of your public key (e.g. /home/myuser/.ssh/id_rsa.pub
+5. Then you should be able to use ssh and scp without entering password (e.g. for automated tasks such as nightly backup)
+
 ## Tivoli
 In the file `/opt/pdweb/etc/webseald-default.conf`, there is an entry `inactive-timeout`.  It can be set to something like 14,400 seconds (4 hours).  This is what controls the amount of time that a user can be inactive before they will get authentication challenge on the next request.
 
