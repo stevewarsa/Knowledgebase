@@ -23,6 +23,9 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Azure DevOps](#azuredevops)
 
 ## Git Commands
+### To query the git config and find out what config file it comes from:
+`git config -l --show-origin`
+
 ### To associate local branch to remote github repo:
 1. Create a new repository on GitHub.
 2. Open Git Bash.
