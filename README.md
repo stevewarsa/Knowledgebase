@@ -465,6 +465,7 @@ See this page for other ways to initialize an ArrayList in 1 line: https://www.b
 10. Find usages of field or method - Alt + F7
 11. Rename field or method - Shift + F6
 12. Optimize imports - Ctl + Alt + O
+13. Show method parameter info for method - Ctl + P
 
 #### Other Intellij Stuff
 If deleting a folder somewhere under .m2 and you want to get the jar to redownload
