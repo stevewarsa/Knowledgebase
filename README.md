@@ -467,6 +467,7 @@ See this page for other ways to initialize an ArrayList in 1 line: https://www.b
 12. Optimize imports - Ctl + Alt + O
 13. Show method parameter info for method - Ctl + P
 14. To open a scratchpad without modifying project files - Ctl + Alt + Shift + Insert
+15. To view what is on the clipboard - Ctl + Shift + V
 
 #### Other Intellij Stuff
 If deleting a folder somewhere under .m2 and you want to get the jar to redownload
