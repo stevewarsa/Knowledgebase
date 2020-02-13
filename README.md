@@ -235,6 +235,12 @@ error_log('Style = ' . $imageRotateStyle . ' for img/church_photos/' . $galleryD
 <img class="img-fluid" src="<?=$galleryImageFullPath?>"<?= $imageRotateStyle != null ? $imageRotateStyle : '' ?> />
 ```
 ## SQL Statements
+### How to get stats using an SQL Query for Oracle:
+```
+SELECT TABLE_NAME, NUM_ROWS,TO_CHAR(LAST_ANALYZED,'DD.MM.YYYY HH24:MI:SS'), PCT_FREE, STATUS, USER_STATS
+FROM DBA_TABLES 
+WHERE OWNER ='SCHEMA_NM' AND TABLE_NAME='TABLE_NM';
+```
 ### Example of create table with PK, FK, Trigger and Grants
 ```
 ALTER SESSION SET CURRENT_SCHEMA = MY_SCHEMAUSER_OWN;
