@@ -23,6 +23,13 @@ This repository contains an ongoing list of knowledge base items that I've learn
 - [Azure DevOps](#azuredevops)
 
 ## Git Commands
+### To reset origin master to a particular commit:
+```
+git checkout master
+git reset --hard <commit_hash>
+git push --force origin master
+```
+
 ### To query the git config and find out what config file it comes from:
 `git config -l --show-origin`
 
