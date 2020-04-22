@@ -757,6 +757,19 @@ I learned this approach from this blog post: https://www.basefactor.com/using-vi
 6. All Jest tests should start running
 7. When the execution hits the line at which you put the breakpoint, it will stop.  
 8. In the debug pane on the left, you should be able to inspect local variables, etc.
+### How to run a single Jest test:
+`./node_modules/jest-cli/bin/jest.js src/app/mymodule/myfolder/my.test.spec.ts`
+### How to mock the implementation of a static method for class in Jest:
+```
+  jest.spyOn(MyTypescriptClass, "myStaticMethodName").mockImplementation((propertyName: string, properties: { [index: string]: string }) => {
+    if (propertyName === "my.prop.1") {
+      return "ER,E2,A2,UB".split(",");
+    } else if (propertyName === "my.prop.2") {
+      return "WZ,ZL,SZ,10".split(",");
+    }
+  });
+
+```
 ### How to put HTML inside NG Bootstrap Tooltips
 Let's say you have a list of messages that you want to put in a tooltip:
 
